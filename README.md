@@ -21,14 +21,23 @@ Follow SAP-recommended project structure and best practices
 
 ### * Architecture Overview
 UI (SAPUI5 / Fiori)
+
         ↓
+        
 OData V4 Services
+
         ↓
+        
 CAP Service Layer (CDS)
+
         ↓
+        
 CAP Java Event Handlers
+
         ↓
+        
 Database (H2 / SQLite / SAP HANA)
+
 
 ## Core Business Domains
 
@@ -43,3 +52,16 @@ Purchase Orders
 Inventory / Stock
 
 Order Status & Lifecycle
+
+## * Tech Stack
+| Layer              | Technology               |
+| ------------------ | ------------------------ |
+| Backend            | SAP CAP (Java)           |
+| Language           | Java 21                  |
+| Data Modeling      | CDS (Core Data Services) |
+| API Protocol       | OData V4                 |
+| Build Tool         | Maven                    |
+| Frontend (Planned) | SAPUI5 / Fiori Elements  |
+| Database (Local)   | H2 / SQLite              |
+| Database (Cloud)   | SAP HANA                 |
+
