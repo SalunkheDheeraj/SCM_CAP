@@ -4,7 +4,10 @@
 
 ### * Project Overview
 SCM_CAP is a Supply Chain Management application built using SAP Cloud Application Programming Model (CAP) with Java as the backend runtime and SAPUI5/Fiori for the frontend.
-The project focuses on model-driven development, exposing business entities via OData V4 services and implementing business rules using CAP Java event handlers.
+The project focuses on :
+model-driven development, 
+exposing business entities via OData V4 services and 
+implementing business rules using CAP Java event handlers.
 It demonstrates a clean, enterprise-ready architecture suitable for real-world SAP applications.
 
 ### * Key Objectives
@@ -39,7 +42,7 @@ CAP Java Event Handlers
 Database (H2 / SQLite / SAP HANA)
 
 
-## Core Business Domains
+### * Core Business Domains
 
 The application currently models the following SCM concepts:
 
@@ -53,7 +56,7 @@ Inventory / Stock
 
 Order Status & Lifecycle
 
-## * Tech Stack
+### * Tech Stack
 | Layer              | Technology               |
 | ------------------ | ------------------------ |
 | Backend            | SAP CAP (Java)           |
@@ -65,3 +68,51 @@ Order Status & Lifecycle
 | Database (Local)   | H2 / SQLite              |
 | Database (Cloud)   | SAP HANA                 |
 
+
+### * Prerequisites
+
+Make sure the following are installed before running the project:
+
+Java 21 (SAPMachine recommended)
+
+Node.js 18 LTS
+
+Maven 3.8+
+
+SAP CAP CLI
+
+npm install -g @sap/cds
+
+### * How to Run the Project (Local)
+1. Build the project
+mvn clean install
+
+2. Run the CAP Java application
+mvn spring-boot:run
+
+3. Verify the application
+
+Application root
+
+http://localhost:8080/
+
+
+OData metadata
+
+http://localhost:8080/odata/v4/$metadata
+
+### * OData Services
+
+Once the application is running, the following are available:
+
+### Service Root
+
+/odata/v4/
+
+
+### Metadata
+
+/odata/v4/$metadata
+
+
+Entities such as Products, Suppliers, and PurchaseOrders are exposed as OData entity sets.
